@@ -267,6 +267,13 @@ Default: `false`
 
 if `filebase` is `true`, generate id with filename.
 
+#### hoistIndex
+
+Type: `boolean` <br>
+Default: `false`
+
+if `hoistIndex` is `true` with `filebase` is set `true`, Messages in `index.{js|jsx|ts|tsx}` hoist to parent location.
+
 #### moduleSourceName
 
 Type: `string` <br>
