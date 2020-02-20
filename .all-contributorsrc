@@ -175,6 +175,15 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "stephenjang",
+      "name": "Jiyoon Jang",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26544?v=4",
+      "profile": "https://github.com/stephenjang",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "repoType": "github",
