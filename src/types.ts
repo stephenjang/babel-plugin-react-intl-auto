@@ -26,6 +26,7 @@ type BabelTransformationFile = {
 export type Opts = {
   removePrefix?: boolean | string | RegExp
   filebase?: boolean
+  hoistIndex?: boolean
   includeExportName?: boolean | 'all'
   extractComments?: boolean
   useKey?: boolean

@@ -33,7 +33,7 @@ export const getPrefix = (
     file: {
       opts: { filename },
     },
-    opts: { removePrefix, filebase = false, separator },
+    opts: { removePrefix, filebase = false, hoistIndex = false, separator },
   }: State,
   exportName: string | null
 ) => {
@@ -41,7 +41,12 @@ export const getPrefix = (
     return exportName === null ? '' : exportName
   }
   const file = relative(process.cwd(), filename)
-  const fomatted = filebase ? file.replace(/\..+$/u, '') : dirname(file)
+  const fomatted = filebase
+    ? file.replace(
+        hoistIndex ? /[/]?(?:index)?\.(?<dot>[^.]*)$/u : /\.(?<dot>[^.]*)$/u,
+        ''
+      )
+    : dirname(file)
   removePrefix =
     removePrefix === undefined || removePrefix === false ? '' : removePrefix
 
